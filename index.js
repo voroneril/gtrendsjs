@@ -253,7 +253,7 @@ class Gtrends {
     this.currentType = "hourly_trends";
     this.currentEndpoint = this.hourlyApiUrl;
 
-    console.log("Requested linkkk", this.currentEndpoint);
+    //console.log("Requested linkkk", this.currentEndpoint);
 
     return new Promise(async (resolve, reject) => {
       try {
