@@ -16,7 +16,7 @@ const COUNTRIES = ['FR', 'TR', 'US'];
 
 class Gtrends {
 
-  constructor(geo = "US", category = "all", lang = "en-US") {
+  constructor(geo = "US", category = "all", lang = "en-US", timeZone = "360") {
     try {
 
       if (COUNTRIES.includes(geo)) {
@@ -27,9 +27,9 @@ class Gtrends {
       }
       this.lang = lang;
       // this.keyword = keyword;
-      this.timeZone = "-60";
+      this.timeZone = timeZone;
       // `https://trends.google.com/trends/api/realtimetrends?hl=en-US&tz=-60&cat=b&fi=0&fs=0&geo=US&ri=300&rs=20&sort=0`
-      this.hourlyApiUrl = `https://trends.google.com/trends/api/realtimetrends?hl=${this.lang}&tz=${this.timeZone}&cat=${this.category}&fi=0&fs=0&geo=${this.geo}&ri=300&rs=20&sort=0`;
+      this.hourlyApiUrl = `https://trends.google.com/trends/api/realtimetrends?hl=${this.lang}&tz=${this.timeZone}&cat=${this.category}&fi=0&fs=0&geo=${this.geo}&ri=300&rs=200&sort=0&ns=15`;
       this.dailyXmlUrl = `https://trends.google.com/trends/trendingsearches/daily/rss?geo=${this.geo}`;
       this.trendsApiUrl = `https://trends.google.com/trends/api/explore/examples?hl=${this.lang}&tz=${this.timeZone}&geo=${this.geo}`;
       this.topdailyApiUrl = `https://trends.google.com/trends/api/topdailytrends?hl=${this.lang}&tz=${this.timeZone}&geo=${this.geo}`;

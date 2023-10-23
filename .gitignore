@@ -3,3 +3,4 @@ modules/*
 .nyc_output/*
 *.txt
 node_modules/*
+/.project
